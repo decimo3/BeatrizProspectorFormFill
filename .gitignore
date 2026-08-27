@@ -1,0 +1,11 @@
+tmp
+data
+venv
+dist
+build
+chromedriver-win64/
+
+*.pyc
+*.log
+chromedriver-win64.zip
+
