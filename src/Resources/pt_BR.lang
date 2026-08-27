@@ -1,0 +1,10 @@
+MISSING_CONFIG=A configuração está incompleta ou não foi definida!
+EXCEL_FILE_NOT_FOUND=A arquivo {file_path} não está acessível!
+EXCEL_LOADING_FILE=Obtendo informações do arquivo %s...
+EXCEL_WORKSHEET_ERROR=A planilha ativa não pode ser definida!
+EXCEL_WORKSHEET_LOADED=Planilha carregada em memória com sucesso!
+FOLDER_ALREADY_SENT=A pasta %s já foi enviada, pulando...
+MISSING_FILES=Um ou mais arquivos necessários não está presente!
+CLIENT_DATA_NOT_FOUND=Não foi encontrada informações para a pasta {folder}!
+FINISHING_PROGRAM_PROMPT=Aperte qualquer tecla para continuar...
+PROSPECTING_SENT=Foi enviado a prospecção para o usuário %s.
