@@ -9,7 +9,6 @@ from selenium_wrapper import Wrapper, WaitSec
 from multi_lang import LANG
 from excel_handler import get_dataframe_from_excel
 
-DEVELOPMENT_ENVIRONMENT = True
 EMPRESA_SELECTION_INDICA = 2
 POSSUI_RO_SELECTION_NAO = 2
 
@@ -143,8 +142,7 @@ if '__main__' == __name__:
 			wrapper.get_element('MODAL_DOCUMENTO_FOTO_FILE', WaitSec.NOW, document_picture)
 			wrapper.get_element('MODAL_DOCUMENTO_TERMO_FILE', WaitSec.NOW, report_picture)
 			wrapper.get_element('MODAL_DOACAO_TERMO_FILE', WaitSec.NOW, donate_picture)
-			if not DEVELOPMENT_ENVIRONMENT:
-				wrapper.get_element('MODAL_SALVAR_BTN', WaitSec.NOW).click()
+			wrapper.get_element('MODAL_SALVAR_BTN', WaitSec.NOW).click()
 			new_folder_name = folder.parent / (folder.name + ' - OK')
 			folder.rename(new_folder_name)
 			logger.info(LANG.PROSPECTING_SENT, folder.name)
