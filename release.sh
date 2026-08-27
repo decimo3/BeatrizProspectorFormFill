@@ -31,8 +31,9 @@ cp src/lnc_bot.ini src/lnc_bot.ini.bak
 git restore src/lnc_bot.ini
 
 # Compress executable and related files
-zip -j lnc_bot.zip dist/lnc_bot.exe src/lnc_bot.ini src/path.ini
-cd src ; zip -r ../lnc_bot.zip Resources/*.lang ; cd ..
+rm lnc_bot.zip
+cd dist/lnc_bot ; zip -r ../../lnc_bot.zip ./* ; cd ../..
+cd src ; zip -r ../lnc_bot.zip lnc_bot.ini path.ini Resources/*.lang ; cd ..
 
 # Create a release on GitHub
 gh release create $version --verify-tag --notes-file release.md --title "lnc_bot ${version} release" lnc_bot.zip
