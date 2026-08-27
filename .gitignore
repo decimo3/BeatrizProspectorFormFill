@@ -7,5 +7,6 @@ chromedriver-win64/
 
 *.pyc
 *.log
-chromedriver-win64.zip
+*.spec
+*.zip
 
