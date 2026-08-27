@@ -24,7 +24,7 @@ cat version.txt
 pip install -r requirements.txt
 
 # Build executable with pyinstaller
-pyinstaller -n lnc_bot --clean --icon appicon.ico --version-file version.txt --paths src src/lnc_bot.py
+pyinstaller -n lnc_bot --clean --icon appicon.ico --version-file version.txt --hidden-import=selenium_wrapper --collect-data=selenium_wrapper --paths src src/lnc_bot.py
 
 # Restore files with sensible data
 cp src/lnc_bot.ini src/lnc_bot.ini.bak
