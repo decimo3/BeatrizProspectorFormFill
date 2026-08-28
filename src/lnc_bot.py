@@ -105,7 +105,7 @@ if '__main__' == __name__:
 			rows = worksheet[worksheet['NOME'] == folder.name]
 			if rows.empty:
 				raise ValueError(LANG.CLIENT_DATA_NOT_FOUND.format(folder=folder.name))
-			infos = rows.iloc[0].to_dict()
+			infos = rows.iloc[-1].to_dict()
 
 			(value, text) = str(infos['TEMPO DE OCUPAÇÃO']).split(' ', 2)
 			multiplier = DURATION.get(text)
