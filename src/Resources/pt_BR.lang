@@ -8,3 +8,4 @@ MISSING_FILES=Um ou mais arquivos necessários não está presente!
 CLIENT_DATA_NOT_FOUND=Não foi encontrada informações para a pasta {folder}!
 FINISHING_PROGRAM_PROMPT=Aperte qualquer tecla para continuar...
 PROSPECTING_SENT=Foi enviado a prospecção para o usuário %s.
+FORM_IS_NOT_VALID=Há erros de preenchimento no formulário!
