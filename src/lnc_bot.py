@@ -6,6 +6,7 @@ from time import sleep
 from urllib.parse import quote, urlparse
 from types import MappingProxyType
 from dotenv import dotenv_values
+from selenium.common.exceptions import StaleElementReferenceException
 from selenium_wrapper import Wrapper, WaitSec
 from multi_lang import LANG
 from excel_handler import get_dataframe_from_excel
@@ -148,7 +149,11 @@ if '__main__' == __name__:
 			form_element = wrapper.get_element('MODAL_PROSPECTOR_FORM', WaitSec.NOW)
 			if not wrapper.driver.execute_script('return arguments[0].checkValidity();', form_element):
 				raise ValueError(LANG.FORM_IS_NOT_VALID)
-			wrapper.get_element('MODAL_SALVAR_BTN', WaitSec.NOW).click()
+			try:
+				wrapper.get_element('MODAL_SALVAR_BTN', WaitSec.NOW).click()
+			except StaleElementReferenceException:
+				sleep(TIME_BETWEEN_INTERACTIONS)
+				wrapper.get_element('MODAL_SALVAR_BTN', WaitSec.NOW).click()
 			new_folder_name = folder.parent / (folder.name + ' - OK')
 			folder.rename(new_folder_name)
 			logger.info(LANG.PROSPECTING_SENT, folder.name)
