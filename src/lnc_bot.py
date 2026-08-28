@@ -2,6 +2,7 @@
 import logging
 from datetime import datetime
 from pathlib import Path
+from time import sleep
 from urllib.parse import quote, urlparse
 from types import MappingProxyType
 from dotenv import dotenv_values
@@ -11,6 +12,7 @@ from excel_handler import get_dataframe_from_excel
 
 EMPRESA_SELECTION_INDICA = 2
 POSSUI_RO_SELECTION_NAO = 2
+TIME_BETWEEN_INTERACTIONS = 3
 
 DURATION = MappingProxyType({
 	'MÊS':    1,
@@ -149,4 +151,5 @@ if '__main__' == __name__:
 			new_folder_name = folder.parent / (folder.name + ' - OK')
 			folder.rename(new_folder_name)
 			logger.info(LANG.PROSPECTING_SENT, folder.name)
+			sleep(TIME_BETWEEN_INTERACTIONS)
 	input(LANG.FINISHING_PROGRAM_PROMPT)
