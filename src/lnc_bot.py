@@ -142,6 +142,9 @@ if '__main__' == __name__:
 			wrapper.get_element('MODAL_DOCUMENTO_FOTO_FILE', WaitSec.NOW, document_picture)
 			wrapper.get_element('MODAL_DOCUMENTO_TERMO_FILE', WaitSec.NOW, report_picture)
 			wrapper.get_element('MODAL_DOACAO_TERMO_FILE', WaitSec.NOW, donate_picture)
+			form_element = wrapper.get_element('MODAL_PROSPECTOR_FORM', WaitSec.NOW)
+			if not wrapper.driver.execute_script('return arguments[0].checkValidity();', form_element):
+				raise ValueError(LANG.FORM_IS_NOT_VALID)
 			wrapper.get_element('MODAL_SALVAR_BTN', WaitSec.NOW).click()
 			new_folder_name = folder.parent / (folder.name + ' - OK')
 			folder.rename(new_folder_name)
