@@ -52,6 +52,7 @@ if '__main__' == __name__:
 		filename=log_file,
 		level=logging.INFO)
 	logger = logging.getLogger(__name__)
+	logger.addHandler(logging.StreamHandler())
 
 	configs = dotenv_values(Path.cwd() / 'lnc_bot.ini')
 	data_path = configs.get('EVIDENCIAS')
