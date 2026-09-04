@@ -138,8 +138,10 @@ if '__main__' == __name__:
 			wrapper.get_element('MODAL_ENDERECO_TXT', WaitSec.NOW, infos['ENDEREÇO'])
 			wrapper.get_element('MODAL_COMPLEMENTO_TXT', WaitSec.NOW, infos['COMPLEMENTO'] or ' ')
 			wrapper.get_element('MODAL_SUB-BAIRRO_TXT', WaitSec.NOW, infos['BAIRRO'])
-			wrapper.get_element('MODAL_REFERENCIA_TXT', WaitSec.NOW, infos['MEDIDOR DE REFERÊNCIA'])
-			wrapper.get_element('MODAL_ZONA-TRAFO_TXT', WaitSec.NOW, infos['ZONA/TRAFO'])
+			wrapper.get_element('MODAL_REFERENCIA_TXT', WaitSec.NOW,
+					str(int(infos['MEDIDOR DE REFERÊNCIA'])))
+			wrapper.get_element('MODAL_ZONA-TRAFO_TXT', WaitSec.NOW,
+					str(int(infos['ZONA/TRAFO'])))
 			wrapper.get_element('MODAL_TEMPO_MESES_TXT', WaitSec.NOW, str(occupation_months))
 			wrapper.select_radio('MODAL_INSTALACAO_CLASSE_RDA', WaitSec.NOW,
 					CLASSIFY[infos['CLASSE DA INSTALAÇÃO']])
