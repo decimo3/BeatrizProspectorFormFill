@@ -136,7 +136,8 @@ if '__main__' == __name__:
 			#wrapper.get_element('MODAL_CLIENTE_PN_TXT', WaitSec.NOW, infos['PN'])
 			wrapper.get_element('MODAL_CLIENTE_CPF_TXT', WaitSec.NOW, infos['CPF/CNPJ'])
 			wrapper.get_element('MODAL_ENDERECO_TXT', WaitSec.NOW, infos['ENDEREÇO'])
-			wrapper.get_element('MODAL_COMPLEMENTO_TXT', WaitSec.NOW, infos['COMPLEMENTO'] or ' ')
+			wrapper.get_element('MODAL_COMPLEMENTO_TXT', WaitSec.NOW,
+					' ' if str(infos['COMPLEMENTO']) == 'nan' else str(infos['COMPLEMENTO']))
 			wrapper.get_element('MODAL_SUB-BAIRRO_TXT', WaitSec.NOW, infos['BAIRRO'])
 			wrapper.get_element('MODAL_REFERENCIA_TXT', WaitSec.NOW,
 					str(int(infos['MEDIDOR DE REFERÊNCIA'])))
