@@ -47,8 +47,10 @@ LOCATION = MappingProxyType({
 })
 
 if '__main__' == __name__:
+	log_path = Path.cwd() / 'logs'
+	log_path.mkdir()
 	today_str = datetime.now().strftime('%Y%m%d')
-	log_file = Path.cwd() / 'logs' / f'lnc_bot_{today_str}.log'
+	log_file = log_path / f'lnc_bot_{today_str}.log'
 	logging.basicConfig(
 		filename=log_file,
 		level=logging.INFO)
