@@ -18,9 +18,9 @@ VSVersionInfo(
         u'040904B0',  # Language and codepage
         [
           StringStruct(u'CompanyName', u'MestreRuan'),
-          StringStruct(u'FileDescription', u'BOT to SharePoint form fill'),
+          StringStruct(u'FileDescription', u'BOT to Prospector form fill'),
           StringStruct(u'FileVersion', u'${MAJOR_VERSION}.${MINOR_VERSION}.${PATCH_VERSION}.0'),
-          StringStruct(u'InternalName', u'LNC_BOT SharePoint form fill'),
+          StringStruct(u'InternalName', u'LNC_BOT Prospector form fill'),
           StringStruct(u'LegalCopyright', u'MestreRuan (C). All rights reserved.'),
           StringStruct(u'OriginalFilename', u'lnc_bot.exe'),
           StringStruct(u'ProductName', u'LNC_BOT'),
