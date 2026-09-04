@@ -158,6 +158,7 @@ if '__main__' == __name__:
 			form_element = wrapper.get_element('MODAL_PROSPECTOR_FORM', WaitSec.NOW)
 			if not wrapper.driver.execute_script('return arguments[0].checkValidity();', form_element):
 				raise ValueError(LANG.FORM_IS_NOT_VALID)
+			input(LANG.AWAIT_USER_INPUT)
 			try:
 				wrapper.get_element('MODAL_SALVAR_BTN', WaitSec.NOW).click()
 			except StaleElementReferenceException:
