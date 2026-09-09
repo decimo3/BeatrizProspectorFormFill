@@ -100,9 +100,9 @@ if '__main__' == __name__:
 				if (
 					not facade_pictures or
 					not inspection_videos or
-					document_picture is None or
-					report_picture is None or
-					donate_picture is None
+					not document_picture or
+					not report_picture or
+					not donate_picture
 					):
 					raise ValueError(LANG.MISSING_FILES)
 
