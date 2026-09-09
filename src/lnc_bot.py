@@ -93,6 +93,7 @@ if '__main__' == __name__:
 				inspection_videos = list(folder.glob('*.mp4'))
 				document_picture = list(folder.glob('RG*.pdf'))
 				document_picture.extend(folder.glob('CPF*.pdf'))
+				document_picture.extend(folder.glob('CNH*.pdf'))
 				report_picture = list(folder.glob('REGULARIZAÇÃO.pdf'))
 				donate_picture = list(folder.glob('DOAÇÃO.pdf'))
 
