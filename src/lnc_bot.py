@@ -12,7 +12,7 @@ from excel_handler import get_dataframe_from_excel
 
 EMPRESA_SELECTION_INDICA = 2
 POSSUI_RO_SELECTION_NAO = 2
-TIME_BETWEEN_INTERACTIONS = 3
+TIME_BETWEEN_INTERACTIONS = 5
 
 DURATION = MappingProxyType({
 	'MÊS':    1,
